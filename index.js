@@ -18,6 +18,9 @@ var isInclusivelyBeforeDay = require('./lib/utils/isInclusivelyBeforeDay').defau
 var isNextDay = require('./lib/utils/isNextDay').default;
 var isSameDay = require('./lib/utils/isSameDay').default;
 
+var isBeforeDay = require('./lib/utils/isBeforeDay').default;
+var isAfterDay = require('./lib/utils/isAfterDay').default;
+
 var toISODateString = require('./lib/utils/toISODateString').default;
 var toLocalizedDateString = require('./lib/utils/toLocalizedDateString').default;
 var toMomentObject = require('./lib/utils/toMomentObject').default;
@@ -44,6 +47,8 @@ module.exports = {
   isInclusivelyBeforeDay: isInclusivelyBeforeDay,
   isNextDay: isNextDay,
   isSameDay: isSameDay,
+  isBeforeDay: isBeforeDay,
+  isAfterDay: isAfterDay,
 
   toISODateString: toISODateString,
   toLocalizedDateString: toLocalizedDateString,
