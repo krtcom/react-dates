@@ -135,6 +135,11 @@ export default class CalendarMonthGrid extends React.Component {
       newMonths = getMonths(initialMonth, numberOfMonths, withoutTransitionMonths);
     }
 
+    if (moment.locale() !== this.locale) {
+      this.locale = moment.locale();
+      newMonths = newMonths.map(m => m.locale(this.locale));
+    }
+
     this.setState({
       months: newMonths,
     });
